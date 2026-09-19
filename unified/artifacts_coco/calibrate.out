@@ -1,0 +1,6 @@
+$ QA_DATASET=coco python3 qa_calibrate.py artifacts_coco/best_ema.pth --out artifacts_coco/best_ema_calibrated.pth --p_edge 0.25 --swap_share 0.1
+227 validation images
+uncalibrated: AUC 0.929913  acc@0.5 0.8370 (compare against the training log's best val line)
+val-optimal margin threshold t = -1.4043  ->  acc 0.8634
+saved artifacts_coco/best_ema_calibrated.pth
+calibrated:  AUC 0.929933  acc@0.5 0.8634

@@ -1,0 +1,8 @@
+454 held-out images, rounds 4-11: 7264 candidates
+saved artifacts/best_model_refit.pth
+       uncalibrated: acc 0.7782  AUC 0.8839  good 0.700  A1 0.846  A2 0.505  A3 0.948  B1 0.923  B2 0.983  (Section 5 weighted 0.7797)
+ crossfit_bias_only: acc 0.8095  good 0.886  A1 0.697  A2 0.279  A3 0.864  B1 0.776  B2 0.943  (Section 5 weighted 0.8113)
+     crossfit_refit: acc 0.8148  AUC 0.8858  good 0.881  A1 0.767  A2 0.290  A3 0.871  B1 0.784  B2 0.944  (Section 5 weighted 0.8171)
+fit: glob +1.1997  smin +0.3292  mean +0.3414  log1p_count +0.2201  intercept +0.9139
+fold check: max |margin - decision| 4.65e-05 over 1816 candidates, 1816/1816 identical decisions
+wrote artifacts/refit.json

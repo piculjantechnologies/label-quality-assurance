@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Resume state and the per-epoch snapshot, both rewritten every epoch by
+# train.py; not part of the release (best_model_refit.pth is, hosted).
+artifacts/checkpoint.pth
+artifacts/model.pth
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store

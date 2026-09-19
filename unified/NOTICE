@@ -1,0 +1,82 @@
+Unified label quality assurance for object bounding boxes
+Copyright 2026 Neven Pičuljan
+
+This product includes software developed for:
+
+  Pičuljan, N. and Car, Ž. "Machine Learning-Based Label Quality Assurance
+  for Object Detection Projects in Requirements Engineering."
+  Applied Sciences 13(10):6234, 2023. https://doi.org/10.3390/app13106234
+
+  Pičuljan, N. "Machine learning-based method for quality assurance of object
+  bounding box labels in images." PhD thesis, University of Zagreb, Faculty
+  of Electrical Engineering and Computing, 2025.
+  https://urn.nsk.hr/urn:nbn:hr:168:865107
+
+License
+-------
+
+The source code in this folder and the released checkpoints
+(artifacts_coco/best_ema_calibrated.pth and
+artifacts_voc/best_ema_calibrated.pth) are licensed under the GNU Affero
+General Public License, version 3 only (AGPL-3.0-only); see LICENSE. The
+checkpoints embed tensors derived from torchvision, subject to the BSD
+3-Clause notice below.
+
+Third-party components
+----------------------
+
+The released checkpoints contain an image trunk initialised from
+torchvision's ImageNet-pretrained ResNet (resnet50, IMAGENET1K_V2 weights;
+the resnet18 variant uses IMAGENET1K_V1). The stages up to and including
+layer2 are frozen during training and embed the pretrained parameters
+(bit-exact in the best_model.pth that qa_train.py writes locally; equal
+up to weight-EMA floating-point rounding, at most 6e-3 absolute, in the
+released best_ema_calibrated.pth files); later stages are fine-tuned
+and are derived from, but not copies of, the torchvision parameters.
+Every other tensor is trained from random initialisation by the code in
+this folder. torchvision is distributed under the BSD 3-Clause license:
+Copyright (c) Soumith Chintala 2016, All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its contributors
+     may be used to endorse or promote products derived from this software
+     without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+The COCO-pretrained detectors that generate a share of training candidates
+(SSDLite320-MobileNetV3-Large, FasterRCNN-MobileNetV3-Large-320-FPN) are downloaded from
+torchvision at run time and are not redistributed here.
+
+Dataset material
+----------------
+
+COCO configuration: the demo label files under samples/ derive from the
+COCO 2017 annotations, which are distributed by the COCO Consortium under
+CC BY 4.0. The demo photographs are NOT redistributed -- they are fetched
+from COCO's image server by samples/fetch_samples.py, with per-image
+Flickr sources and licenses listed in samples/ATTRIBUTION.md. Training
+data (COCO images and annotation files) is obtained by the user from
+cocodataset.org and remains subject to its own terms.
+
+VOC configuration: no Pascal VOC 2012 images or annotations are
+redistributed. The dataset is downloaded by the user at run time
+(download_pascal_voc_2012_dataset.py) and remains subject to its own
+terms.

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Demo photographs: COCO images under individual Flickr licenses, not
+# redistributed here. `python3 samples/fetch_samples.py` downloads them.
+samples/*.png
+
+# Model weights: distributed outside the repository (see README, Weights).
+*.pth
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store

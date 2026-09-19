@@ -1,0 +1,8 @@
+582 validation images, 4 rounds: 4656 candidates (2369 good)
+saved artifacts/best_model_refit.pth
+       uncalibrated: acc 0.7738  AUC 0.9445  good 0.602  bad 0.951
+ crossfit_bias_only: acc 0.8902  good 0.920  bad 0.860
+     crossfit_refit: acc 0.8969  AUC 0.9469  good 0.930  bad 0.862
+fit: glob +1.1091  smin +0.1102  mean +0.6463  log1p_count -0.1678  intercept +2.4751
+fold check: max |margin - decision| 2.20e-06 over 1024 candidates, 1024/1024 identical decisions
+wrote artifacts/refit.json

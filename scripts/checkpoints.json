@@ -1,0 +1,22 @@
+[
+  {
+    "path": "thesis/artifacts/best_model_refit.pth",
+    "sha256": "27040e830f3f927a6f4a797ff857140e5b33826a2129c74dacc60ca30f1590ca",
+    "bytes": 105951820
+  },
+  {
+    "path": "paper/artifacts/best_model_refit.pth",
+    "sha256": "5727521cb7712774df8651e438dc70c1f08a91972bebd6e909d99f486012a9e4",
+    "bytes": 107326509
+  },
+  {
+    "path": "unified/artifacts_voc/best_ema_calibrated.pth",
+    "sha256": "738531d0923755983ac7fb697c48f5d40ef23083b3dc6c37f3f78ef4b616b757",
+    "bytes": 154517793
+  },
+  {
+    "path": "unified/artifacts_coco/best_ema_calibrated.pth",
+    "sha256": "91f3aed5e19a452c4008cc90a0d93a90657065938f9f17d64f65729172ef546a",
+    "bytes": 154738209
+  }
+]

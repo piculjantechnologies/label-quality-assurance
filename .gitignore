@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Model weights are hosted in Azure Blob Storage (scripts/fetch_checkpoints.sh).
+*.pth
+
+# Gradio run-time cache (paper/web_demo.py)
+.gradio/
+
+# Editor / tooling
+.idea/
+.DS_Store
+

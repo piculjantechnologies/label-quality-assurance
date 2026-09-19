@@ -1,0 +1,68 @@
+positive sampler p_exact set to 0.50, p_edge 0.25
+4314 train / 227 validation images; unified mixer detector=0.1 ih=0.5 compose=0.5 swap=0.1 severity_mix=balanced; augment=True; per_box=True (support 0.3, margin 0.3); count_weight=0.0
+ghost BatchNorm: virtual sub-batch 8
+37.1M trainable parameters, 80 classes, input 640px, fusion 40x40, frozen through layer2, amp=True
+effective batch 64 (64 x 1 accumulated)
+<site-packages>/torch/optim/lr_scheduler.py:182: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+epoch 1/60 loss=2.1463 val_auc=0.743 val_acc=0.692  *best* ema=0.540 *ema-best*
+epoch 2/60 loss=1.6244 val_auc=0.852 val_acc=0.742  *best* ema=0.647 *ema-best*
+epoch 3/60 loss=1.4152 val_auc=0.867 val_acc=0.800  *best* ema=0.732 *ema-best*
+epoch 4/60 loss=1.3252 val_auc=0.865 val_acc=0.791 ema=0.752 *ema-best*
+epoch 5/60 loss=1.2403 val_auc=0.883 val_acc=0.826  *best* ema=0.752 *ema-best*
+epoch 6/60 loss=1.1732 val_auc=0.889 val_acc=0.837  *best* ema=0.751
+epoch 7/60 loss=1.1480 val_auc=0.902 val_acc=0.819  *best* ema=0.746
+epoch 8/60 loss=1.0888 val_auc=0.898 val_acc=0.828 ema=0.751
+epoch 9/60 loss=1.0688 val_auc=0.895 val_acc=0.830 ema=0.760 *ema-best*
+epoch 10/60 loss=1.0597 val_auc=0.898 val_acc=0.835 ema=0.772 *ema-best*
+epoch 11/60 loss=1.0233 val_auc=0.906 val_acc=0.830  *best* ema=0.789 *ema-best*
+epoch 12/60 loss=0.9825 val_auc=0.900 val_acc=0.841 ema=0.811 *ema-best*
+epoch 13/60 loss=0.9803 val_auc=0.895 val_acc=0.841 ema=0.844 *ema-best*
+epoch 14/60 loss=0.9491 val_auc=0.903 val_acc=0.826 ema=0.881 *ema-best*
+epoch 15/60 loss=0.9250 val_auc=0.914 val_acc=0.833  *best* ema=0.900 *ema-best*
+epoch 16/60 loss=0.9080 val_auc=0.907 val_acc=0.837 ema=0.903 *ema-best*
+epoch 17/60 loss=0.9063 val_auc=0.909 val_acc=0.813 ema=0.906 *ema-best*
+epoch 18/60 loss=0.8961 val_auc=0.913 val_acc=0.848 ema=0.911 *ema-best*
+epoch 19/60 loss=0.8723 val_auc=0.914 val_acc=0.822 ema=0.916 *ema-best*
+epoch 20/60 loss=0.8720 val_auc=0.909 val_acc=0.844 ema=0.921 *ema-best*
+epoch 21/60 loss=0.8369 val_auc=0.914 val_acc=0.848 ema=0.925 *ema-best*
+epoch 22/60 loss=0.8241 val_auc=0.917 val_acc=0.819  *best* ema=0.926 *ema-best*
+epoch 23/60 loss=0.8442 val_auc=0.924 val_acc=0.846  *best* ema=0.927 *ema-best*
+epoch 24/60 loss=0.8110 val_auc=0.907 val_acc=0.822 ema=0.927
+epoch 25/60 loss=0.8193 val_auc=0.923 val_acc=0.841 ema=0.927 *ema-best*
+epoch 26/60 loss=0.7952 val_auc=0.914 val_acc=0.830 ema=0.928 *ema-best*
+epoch 27/60 loss=0.7748 val_auc=0.918 val_acc=0.819 ema=0.926
+epoch 28/60 loss=0.7577 val_auc=0.917 val_acc=0.811 ema=0.927
+epoch 29/60 loss=0.7575 val_auc=0.919 val_acc=0.841 ema=0.928
+epoch 30/60 loss=0.7541 val_auc=0.923 val_acc=0.828 ema=0.928 *ema-best*
+epoch 31/60 loss=0.7456 val_auc=0.924 val_acc=0.813 ema=0.927
+epoch 32/60 loss=0.7295 val_auc=0.922 val_acc=0.819 ema=0.927
+epoch 33/60 loss=0.7161 val_auc=0.923 val_acc=0.844 ema=0.928
+epoch 34/60 loss=0.7277 val_auc=0.923 val_acc=0.835 ema=0.927
+epoch 35/60 loss=0.7203 val_auc=0.927 val_acc=0.828  *best* ema=0.929 *ema-best*
+epoch 36/60 loss=0.7214 val_auc=0.926 val_acc=0.826 ema=0.930 *ema-best*
+epoch 37/60 loss=0.7020 val_auc=0.919 val_acc=0.804 ema=0.930
+epoch 38/60 loss=0.6965 val_auc=0.930 val_acc=0.844  *best* ema=0.929
+epoch 39/60 loss=0.6906 val_auc=0.916 val_acc=0.819 ema=0.929
+epoch 40/60 loss=0.6749 val_auc=0.926 val_acc=0.828 ema=0.928
+epoch 41/60 loss=0.6578 val_auc=0.919 val_acc=0.808 ema=0.928
+epoch 42/60 loss=0.6691 val_auc=0.913 val_acc=0.791 ema=0.927
+epoch 43/60 loss=0.6420 val_auc=0.914 val_acc=0.811 ema=0.926
+epoch 44/60 loss=0.6647 val_auc=0.921 val_acc=0.791 ema=0.925
+epoch 45/60 loss=0.6611 val_auc=0.921 val_acc=0.824 ema=0.924
+epoch 46/60 loss=0.6486 val_auc=0.920 val_acc=0.815 ema=0.924
+epoch 47/60 loss=0.6234 val_auc=0.918 val_acc=0.811 ema=0.924
+epoch 48/60 loss=0.6412 val_auc=0.914 val_acc=0.808 ema=0.923
+epoch 49/60 loss=0.6277 val_auc=0.917 val_acc=0.758 ema=0.923
+epoch 50/60 loss=0.6481 val_auc=0.917 val_acc=0.771 ema=0.922
+epoch 51/60 loss=0.6301 val_auc=0.923 val_acc=0.797 ema=0.923
+epoch 52/60 loss=0.6157 val_auc=0.919 val_acc=0.773 ema=0.922
+epoch 53/60 loss=0.6361 val_auc=0.926 val_acc=0.804 ema=0.923
+epoch 54/60 loss=0.6188 val_auc=0.924 val_acc=0.828 ema=0.924
+epoch 55/60 loss=0.6165 val_auc=0.920 val_acc=0.744 ema=0.924
+epoch 56/60 loss=0.6037 val_auc=0.926 val_acc=0.817 ema=0.924
+epoch 57/60 loss=0.6277 val_auc=0.925 val_acc=0.802 ema=0.924
+epoch 58/60 loss=0.6127 val_auc=0.924 val_acc=0.795 ema=0.924
+epoch 59/60 loss=0.6063 val_auc=0.926 val_acc=0.817 ema=0.924
+epoch 60/60 loss=0.6149 val_auc=0.915 val_acc=0.756 ema=0.924
+best raw AUC 0.930, best EMA AUC 0.930; artifacts in artifacts_coco/

@@ -1,0 +1,5 @@
+$ QA_DATASET=coco python3 qa_ablation.py artifacts_coco/best_ema_calibrated.pth --p_edge 0.25 --swap_share 0.1
+artifacts_coco/best_ema_calibrated.pth  (454 val samples)
+        true: AUC 0.930  acc 0.863  mean P(good) pos 0.838 neg 0.197
+  mismatched: AUC 0.543  acc 0.498  mean P(good) pos 0.012 neg 0.016
+       blank: AUC 0.553  acc 0.498  mean P(good) pos 0.073 neg 0.069

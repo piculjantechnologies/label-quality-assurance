@@ -1,0 +1,5 @@
+$ QA_DATASET=voc python3 qa_ablation.py artifacts_voc/best_ema_calibrated.pth --p_edge 0.25 --swap_share 0.1
+artifacts_voc/best_ema_calibrated.pth  (2328 val samples)
+        true: AUC 0.940  acc 0.886  mean P(good) pos 0.904 neg 0.200
+  mismatched: AUC 0.568  acc 0.493  mean P(good) pos 0.023 neg 0.017
+       blank: AUC 0.578  acc 0.500  mean P(good) pos 0.086 neg 0.061

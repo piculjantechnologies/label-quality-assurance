@@ -1,0 +1,171 @@
+positive sampler p_exact set to 0.50 (data_loader default 0.25)
+image-hard negatives active (A1-one/A2/A3/R + bank B1/B2)
+0.50 of negatives from the paper's Section 5 generator
+4087 train / 454 validation images
+validation: 3632 candidates (4 round(s), test protocol)
+ghost BN: virtual sub-batch 8
+image trunk initialized from ImageNet weights
+image trunk lr 1.00e-04
+effective batch 64 (32 x 2 accumulated), amp=True
+adamw, lr 0.001, weight decay 0.01, warmup 2 epoch(s), cosine over 128 steps/epoch
+epoch 1/160 loss=2.0679 val_auc=0.506 val_acc=0.500  *best*
+epoch 2/160 loss=1.6137 val_auc=0.515 val_acc=0.500  *best*
+epoch 3/160 loss=1.4467 val_auc=0.542 val_acc=0.500  *best*
+epoch 4/160 loss=1.3390 val_auc=0.619 val_acc=0.500  *best*
+epoch 5/160 loss=1.2526 val_auc=0.681 val_acc=0.508  *best*
+epoch 6/160 loss=1.2029 val_auc=0.722 val_acc=0.541  *best*
+epoch 7/160 loss=1.1561 val_auc=0.745 val_acc=0.589  *best*
+epoch 8/160 loss=1.1116 val_auc=0.755 val_acc=0.634  *best*
+epoch 9/160 loss=1.0768 val_auc=0.761 val_acc=0.662  *best*
+epoch 10/160 loss=1.0618 val_auc=0.760 val_acc=0.685
+epoch 11/160 loss=1.0250 val_auc=0.770 val_acc=0.706  *best*
+epoch 12/160 loss=0.9866 val_auc=0.780 val_acc=0.715  *best*
+epoch 13/160 loss=0.9816 val_auc=0.793 val_acc=0.725  *best*
+epoch 14/160 loss=0.9585 val_auc=0.795 val_acc=0.722  *best*
+epoch 15/160 loss=0.9412 val_auc=0.814 val_acc=0.750  *best*
+epoch 16/160 loss=0.9273 val_auc=0.816 val_acc=0.755  *best*
+epoch 17/160 loss=0.9090 val_auc=0.819 val_acc=0.750  *best*
+epoch 18/160 loss=0.9073 val_auc=0.822 val_acc=0.747  *best*
+epoch 19/160 loss=0.8829 val_auc=0.825 val_acc=0.749  *best*
+epoch 20/160 loss=0.8625 val_auc=0.830 val_acc=0.754  *best*
+epoch 21/160 loss=0.8626 val_auc=0.838 val_acc=0.770  *best*
+epoch 22/160 loss=0.8593 val_auc=0.842 val_acc=0.779  *best*
+epoch 23/160 loss=0.8499 val_auc=0.846 val_acc=0.781  *best*
+epoch 24/160 loss=0.8275 val_auc=0.849 val_acc=0.787  *best*
+epoch 25/160 loss=0.8239 val_auc=0.854 val_acc=0.788  *best*
+epoch 26/160 loss=0.8244 val_auc=0.856 val_acc=0.790  *best*
+epoch 27/160 loss=0.7994 val_auc=0.858 val_acc=0.788  *best*
+epoch 28/160 loss=0.8046 val_auc=0.859 val_acc=0.789  *best*
+epoch 29/160 loss=0.7933 val_auc=0.859 val_acc=0.791  *best*
+epoch 30/160 loss=0.7844 val_auc=0.860 val_acc=0.791  *best*
+epoch 31/160 loss=0.7772 val_auc=0.861 val_acc=0.791  *best*
+epoch 32/160 loss=0.7633 val_auc=0.862 val_acc=0.795  *best*
+epoch 33/160 loss=0.7658 val_auc=0.863 val_acc=0.797  *best*
+epoch 34/160 loss=0.7902 val_auc=0.864 val_acc=0.796  *best*
+epoch 35/160 loss=0.7592 val_auc=0.864 val_acc=0.795  *best*
+epoch 36/160 loss=0.7405 val_auc=0.865 val_acc=0.799  *best*
+epoch 37/160 loss=0.7440 val_auc=0.865 val_acc=0.798  *best*
+epoch 38/160 loss=0.7382 val_auc=0.866 val_acc=0.799  *best*
+epoch 39/160 loss=0.7288 val_auc=0.867 val_acc=0.800  *best*
+epoch 40/160 loss=0.7236 val_auc=0.868 val_acc=0.800  *best*
+epoch 41/160 loss=0.7253 val_auc=0.869 val_acc=0.803  *best*
+epoch 42/160 loss=0.7055 val_auc=0.869 val_acc=0.802  *best*
+epoch 43/160 loss=0.7099 val_auc=0.870 val_acc=0.803  *best*
+epoch 44/160 loss=0.7111 val_auc=0.871 val_acc=0.802  *best*
+epoch 45/160 loss=0.6901 val_auc=0.871 val_acc=0.801  *best*
+epoch 46/160 loss=0.7028 val_auc=0.871 val_acc=0.803
+epoch 47/160 loss=0.6802 val_auc=0.871 val_acc=0.803  *best*
+epoch 48/160 loss=0.6906 val_auc=0.871 val_acc=0.801  *best*
+epoch 49/160 loss=0.6810 val_auc=0.872 val_acc=0.801  *best*
+epoch 50/160 loss=0.6906 val_auc=0.872 val_acc=0.798  *best*
+epoch 51/160 loss=0.6780 val_auc=0.871 val_acc=0.796
+epoch 52/160 loss=0.6732 val_auc=0.871 val_acc=0.794
+epoch 53/160 loss=0.6780 val_auc=0.872 val_acc=0.795  *best*
+epoch 54/160 loss=0.6701 val_auc=0.872 val_acc=0.795  *best*
+epoch 55/160 loss=0.6582 val_auc=0.873 val_acc=0.795  *best*
+epoch 56/160 loss=0.6466 val_auc=0.873 val_acc=0.796  *best*
+epoch 57/160 loss=0.6542 val_auc=0.873 val_acc=0.795  *best*
+epoch 58/160 loss=0.6517 val_auc=0.874 val_acc=0.797  *best*
+epoch 59/160 loss=0.6574 val_auc=0.874 val_acc=0.796
+epoch 60/160 loss=0.6313 val_auc=0.873 val_acc=0.793
+epoch 61/160 loss=0.6362 val_auc=0.874 val_acc=0.792  *best*
+epoch 62/160 loss=0.6319 val_auc=0.875 val_acc=0.789  *best*
+epoch 63/160 loss=0.6282 val_auc=0.875 val_acc=0.790  *best*
+epoch 64/160 loss=0.6167 val_auc=0.875 val_acc=0.790
+epoch 65/160 loss=0.6378 val_auc=0.875 val_acc=0.788  *best*
+epoch 66/160 loss=0.6218 val_auc=0.875 val_acc=0.789
+epoch 67/160 loss=0.6208 val_auc=0.876 val_acc=0.788  *best*
+epoch 68/160 loss=0.5959 val_auc=0.876 val_acc=0.788  *best*
+epoch 69/160 loss=0.6050 val_auc=0.877 val_acc=0.788  *best*
+epoch 70/160 loss=0.5989 val_auc=0.877 val_acc=0.789
+epoch 71/160 loss=0.6083 val_auc=0.877 val_acc=0.784  *best*
+epoch 72/160 loss=0.5978 val_auc=0.877 val_acc=0.780
+epoch 73/160 loss=0.5925 val_auc=0.876 val_acc=0.779
+epoch 74/160 loss=0.5900 val_auc=0.876 val_acc=0.779
+epoch 75/160 loss=0.5854 val_auc=0.877 val_acc=0.779
+epoch 76/160 loss=0.5925 val_auc=0.877 val_acc=0.779  *best*
+epoch 77/160 loss=0.5801 val_auc=0.877 val_acc=0.776  *best*
+epoch 78/160 loss=0.5816 val_auc=0.878 val_acc=0.777  *best*
+epoch 79/160 loss=0.5703 val_auc=0.879 val_acc=0.773  *best*
+epoch 80/160 loss=0.5698 val_auc=0.879 val_acc=0.770  *best*
+epoch 81/160 loss=0.5695 val_auc=0.879 val_acc=0.768  *best*
+epoch 82/160 loss=0.5606 val_auc=0.878 val_acc=0.770
+epoch 83/160 loss=0.5607 val_auc=0.878 val_acc=0.766
+epoch 84/160 loss=0.5525 val_auc=0.878 val_acc=0.764
+epoch 85/160 loss=0.5599 val_auc=0.877 val_acc=0.765
+epoch 86/160 loss=0.5583 val_auc=0.877 val_acc=0.764
+epoch 87/160 loss=0.5517 val_auc=0.877 val_acc=0.763
+epoch 88/160 loss=0.5323 val_auc=0.877 val_acc=0.763
+epoch 89/160 loss=0.5466 val_auc=0.877 val_acc=0.762
+epoch 90/160 loss=0.5415 val_auc=0.877 val_acc=0.761
+epoch 91/160 loss=0.5305 val_auc=0.877 val_acc=0.762
+epoch 92/160 loss=0.5246 val_auc=0.877 val_acc=0.761
+epoch 93/160 loss=0.5273 val_auc=0.878 val_acc=0.759
+epoch 94/160 loss=0.5227 val_auc=0.878 val_acc=0.756
+epoch 95/160 loss=0.5162 val_auc=0.878 val_acc=0.754
+epoch 96/160 loss=0.5281 val_auc=0.877 val_acc=0.755
+epoch 97/160 loss=0.5054 val_auc=0.877 val_acc=0.752
+epoch 98/160 loss=0.5103 val_auc=0.876 val_acc=0.750
+epoch 99/160 loss=0.5182 val_auc=0.877 val_acc=0.749
+epoch 100/160 loss=0.5177 val_auc=0.877 val_acc=0.746
+epoch 101/160 loss=0.5092 val_auc=0.877 val_acc=0.741
+epoch 102/160 loss=0.4940 val_auc=0.877 val_acc=0.742
+epoch 103/160 loss=0.5050 val_auc=0.878 val_acc=0.741
+epoch 104/160 loss=0.5009 val_auc=0.878 val_acc=0.739
+epoch 105/160 loss=0.4975 val_auc=0.877 val_acc=0.738
+epoch 106/160 loss=0.4983 val_auc=0.877 val_acc=0.738
+epoch 107/160 loss=0.5045 val_auc=0.877 val_acc=0.737
+epoch 108/160 loss=0.4964 val_auc=0.877 val_acc=0.737
+epoch 109/160 loss=0.4899 val_auc=0.877 val_acc=0.735
+epoch 110/160 loss=0.4864 val_auc=0.877 val_acc=0.734
+epoch 111/160 loss=0.4873 val_auc=0.876 val_acc=0.731
+epoch 112/160 loss=0.4902 val_auc=0.876 val_acc=0.730
+epoch 113/160 loss=0.4798 val_auc=0.876 val_acc=0.730
+epoch 114/160 loss=0.4751 val_auc=0.875 val_acc=0.727
+epoch 115/160 loss=0.4760 val_auc=0.875 val_acc=0.725
+epoch 116/160 loss=0.4835 val_auc=0.875 val_acc=0.723
+epoch 117/160 loss=0.4817 val_auc=0.876 val_acc=0.723
+epoch 118/160 loss=0.4790 val_auc=0.876 val_acc=0.722
+epoch 119/160 loss=0.4837 val_auc=0.875 val_acc=0.722
+epoch 120/160 loss=0.4686 val_auc=0.875 val_acc=0.719
+epoch 121/160 loss=0.4780 val_auc=0.875 val_acc=0.719
+epoch 122/160 loss=0.4631 val_auc=0.874 val_acc=0.713
+epoch 123/160 loss=0.4651 val_auc=0.874 val_acc=0.714
+epoch 124/160 loss=0.4635 val_auc=0.874 val_acc=0.713
+epoch 125/160 loss=0.4540 val_auc=0.874 val_acc=0.709
+epoch 126/160 loss=0.4501 val_auc=0.873 val_acc=0.708
+epoch 127/160 loss=0.4464 val_auc=0.873 val_acc=0.706
+epoch 128/160 loss=0.4562 val_auc=0.873 val_acc=0.701
+epoch 129/160 loss=0.4445 val_auc=0.872 val_acc=0.699
+epoch 130/160 loss=0.4500 val_auc=0.872 val_acc=0.699
+epoch 131/160 loss=0.4392 val_auc=0.872 val_acc=0.697
+epoch 132/160 loss=0.4588 val_auc=0.872 val_acc=0.693
+epoch 133/160 loss=0.4451 val_auc=0.871 val_acc=0.695
+epoch 134/160 loss=0.4475 val_auc=0.871 val_acc=0.695
+epoch 135/160 loss=0.4344 val_auc=0.871 val_acc=0.693
+epoch 136/160 loss=0.4380 val_auc=0.870 val_acc=0.692
+epoch 137/160 loss=0.4354 val_auc=0.870 val_acc=0.691
+epoch 138/160 loss=0.4456 val_auc=0.869 val_acc=0.690
+epoch 139/160 loss=0.4398 val_auc=0.869 val_acc=0.688
+epoch 140/160 loss=0.4375 val_auc=0.869 val_acc=0.688
+epoch 141/160 loss=0.4322 val_auc=0.869 val_acc=0.687
+epoch 142/160 loss=0.4296 val_auc=0.868 val_acc=0.688
+epoch 143/160 loss=0.4352 val_auc=0.868 val_acc=0.685
+epoch 144/160 loss=0.4303 val_auc=0.868 val_acc=0.683
+epoch 145/160 loss=0.4430 val_auc=0.868 val_acc=0.683
+epoch 146/160 loss=0.4326 val_auc=0.868 val_acc=0.682
+epoch 147/160 loss=0.4289 val_auc=0.868 val_acc=0.681
+epoch 148/160 loss=0.4217 val_auc=0.868 val_acc=0.682
+epoch 149/160 loss=0.4435 val_auc=0.868 val_acc=0.681
+epoch 150/160 loss=0.4278 val_auc=0.868 val_acc=0.681
+epoch 151/160 loss=0.4287 val_auc=0.868 val_acc=0.681
+epoch 152/160 loss=0.4380 val_auc=0.868 val_acc=0.681
+epoch 153/160 loss=0.4232 val_auc=0.868 val_acc=0.680
+epoch 154/160 loss=0.4318 val_auc=0.868 val_acc=0.680
+epoch 155/160 loss=0.4222 val_auc=0.868 val_acc=0.679
+epoch 156/160 loss=0.4270 val_auc=0.867 val_acc=0.679
+epoch 157/160 loss=0.4414 val_auc=0.867 val_acc=0.678
+epoch 158/160 loss=0.4310 val_auc=0.867 val_acc=0.678
+epoch 159/160 loss=0.4316 val_auc=0.868 val_acc=0.678
+epoch 160/160 loss=0.4299 val_auc=0.868 val_acc=0.678
+best validation AUC 0.879; artifacts in artifacts/

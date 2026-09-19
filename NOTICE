@@ -1,0 +1,94 @@
+label-quality-assurance
+Copyright 2026 Neven Pičuljan
+
+This product includes software developed for the following publications:
+
+  Pičuljan, N. and Car, Ž. "Machine Learning-Based Label Quality Assurance
+  for Object Detection Projects in Requirements Engineering."
+  Applied Sciences 13(10):6234, 2023. https://doi.org/10.3390/app13106234
+
+  Pičuljan, N. "Machine learning-based method for quality assurance of object
+  bounding box labels in images." PhD thesis, University of Zagreb, Faculty of
+  Electrical Engineering and Computing, 2025.
+  https://urn.nsk.hr/urn:nbn:hr:168:865107
+
+--------------------------------------------------------------------------------
+Scope of the licence
+--------------------------------------------------------------------------------
+
+Source code in this repository is licensed under the GNU Affero General
+Public License, version 3 only (AGPL-3.0-only); see LICENSE.
+
+The model checkpoints distributed with this repository — the four listed in
+scripts/checkpoints.json, hosted in Azure Blob Storage — are released under
+the same AGPL-3.0-only, subject to the BSD 3-Clause notice below for the
+torchvision-derived tensors they embed. No dataset images are redistributed
+here: Pascal VOC 2012 and COCO 2017 are downloaded at run time from their
+respective sources and remain subject to their own terms. The demo label
+files under paper/samples/ and unified/samples/ are derived from the COCO
+2017 annotations (CC BY 4.0, © COCO Consortium); the photographs they
+belong to are fetched by each folder's samples/fetch_samples.py, not
+redistributed.
+
+--------------------------------------------------------------------------------
+Third-party components in the distributed model weights
+--------------------------------------------------------------------------------
+
+The model weights distributed for thesis/, paper/ and unified/ embed
+tensors derived from torchvision's ImageNet-pretrained ResNets:
+
+  thesis/  (artifacts/best_model_refit.pth): ResNet-18 (IMAGENET1K_V1) image
+                 branch through layer4, initialised from the pretrained
+                 weights and fine-tuned; its weights are derived from, not
+                 copies of, the torchvision parameters, and its BatchNorm
+                 running statistics, kept frozen, equal the pretrained ones
+                 up to weight-EMA floating-point rounding (at most 2e-4
+                 absolute).
+  paper/   (artifacts/best_model_refit.pth): ResNet-18 (IMAGENET1K_V1) image
+                 trunk through layer4, initialised from the pretrained
+                 weights and fine-tuned; its weights are derived from, not
+                 copies of, the torchvision parameters, and its BatchNorm
+                 running statistics, kept frozen, equal the pretrained ones
+                 up to weight-EMA floating-point rounding (at most 2e-4
+                 absolute).
+  unified/ (artifacts_voc/, artifacts_coco/): ResNet-50 (IMAGENET1K_V2)
+                 trunk, frozen through layer2 (the pretrained parameters, up
+                 to weight-EMA floating-point rounding, at most 6e-3
+                 absolute) with later stages fine-tuned (derived).
+
+Every other trained tensor is learned from scratch, not from pretrained
+weights, by the code in each folder. Each folder's own NOTICE states the
+details.
+
+  torchvision
+  Copyright (c) Soumith Chintala 2016, All rights reserved.
+  Licensed under the BSD 3-Clause License.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its contributors
+     may be used to endorse or promote products derived from this software
+     without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+COCO-pretrained detectors used to generate a share of the candidates
+(SSDLite320-MobileNetV3-Large, FasterRCNN-MobileNetV3-Large-320-FPN) are
+downloaded from
+torchvision at run time and are not redistributed here.

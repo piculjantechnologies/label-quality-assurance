@@ -1,0 +1,6 @@
+sample_1: P(good)=0.831 -> Good (target Good) OK  | +35% exp: 0.684
+sample_2: P(good)=0.045 -> Bad  (target Bad ) OK  | +35% exp: 0.067
+sample_3: P(good)=0.871 -> Good (target Good) OK  | +35% exp: 0.857
+sample_4: P(good)=0.854 -> Good (target Good) OK  | +35% exp: 0.833
+sample_5: P(good)=0.001 -> Bad  (target Bad ) OK  | +35% exp: 0.002
+verdicts correct: 5/5

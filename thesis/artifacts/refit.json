@@ -1,0 +1,45 @@
+{
+  "checkpoint": "artifacts/best_model.pth",
+  "population": {
+    "images": 582,
+    "rounds": [
+      4,
+      7
+    ],
+    "candidates": 4656
+  },
+  "uncalibrated": {
+    "roc_auc": 0.9444596922462436,
+    "accuracy": 0.773840206185567,
+    "good_recall": 0.6023638666103841,
+    "bad_recall": 0.9514648010494097
+  },
+  "crossfit_bias_only": {
+    "accuracy": 0.8902491408934707,
+    "good_recall": 0.9197973828619671,
+    "bad_recall": 0.8596414516834281
+  },
+  "crossfit_refit": {
+    "roc_auc": 0.9468667120839926,
+    "accuracy": 0.8969072164948454,
+    "good_recall": 0.9303503588011819,
+    "bad_recall": 0.8622649759510276
+  },
+  "fit": {
+    "C": 1.0,
+    "intercept": 2.4750605483643677,
+    "coef": {
+      "glob": 1.109074965499112,
+      "smin": 0.11024883237539389,
+      "mean": 0.6462802655366252,
+      "log1p_count": -0.16776039268775572
+    },
+    "in_sample_roc_auc": 0.9477522945685812
+  },
+  "fold_check": {
+    "candidates": 1024,
+    "max_abs_diff": 2.2024332295700333e-06,
+    "same_decisions": 1024
+  },
+  "out": "artifacts/best_model_refit.pth"
+}

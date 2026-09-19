@@ -1,0 +1,79 @@
+{
+  "ckpt": "artifacts/best_model_refit.pth",
+  "seed": 0,
+  "ablation": {
+    "true": {
+      "n": 1000,
+      "auc": 0.9303010301030102,
+      "acc": 0.883
+    },
+    "mismatched": {
+      "n": 1000,
+      "auc": 0.594051405140514,
+      "acc": 0.495
+    },
+    "blank": {
+      "n": 1000,
+      "auc": 0.5237603760376037,
+      "acc": 0.461
+    },
+    "max_abs_prob_diff_vs_true": 0.9889124631881714
+  },
+  "per_op": {
+    "erase": {
+      "n": 150,
+      "bad_recall": 0.5866666666666667,
+      "mean_p_good": 0.36546706898123377,
+      "n_empty_label": 58,
+      "bad_recall_empty_label": 1.0,
+      "bad_recall_boxes_remain": 0.32608695652173914
+    },
+    "swap": {
+      "n": 150,
+      "bad_recall": 0.86,
+      "mean_p_good": 0.18958637559248018
+    },
+    "translate": {
+      "n": 150,
+      "bad_recall": 0.78,
+      "mean_p_good": 0.25837988766852393
+    },
+    "resize": {
+      "n": 150,
+      "bad_recall": 0.84,
+      "mean_p_good": 0.2030300589791538
+    },
+    "crop": {
+      "n": 150,
+      "bad_recall": 0.76,
+      "mean_p_good": 0.2681931206038765
+    },
+    "combine": {
+      "n": 150,
+      "bad_recall": 0.32666666666666666,
+      "mean_p_good": 0.6390122516949972
+    },
+    "split": {
+      "n": 150,
+      "bad_recall": 0.86,
+      "mean_p_good": 0.2410701599624008
+    },
+    "jitter": {
+      "n": 150,
+      "bad_recall": 0.84,
+      "mean_p_good": 0.20009552789156107
+    }
+  },
+  "args": {
+    "ckpt": "artifacts/best_model_refit.pth",
+    "pool": "~/fiftyone/voc-2012/train/processed_annotations",
+    "ablation": true,
+    "per_op": true,
+    "n_images": 500,
+    "per_op_n": 150,
+    "batch_size": 64,
+    "workers": 4,
+    "seed": 0,
+    "out": "artifacts/analysis_release.json"
+  }
+}

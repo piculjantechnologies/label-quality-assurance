@@ -1,0 +1,77 @@
+Label quality assurance on COCO: code for the 2023 Applied Sciences paper
+Copyright 2026 Neven Pičuljan
+
+This product includes software developed for:
+
+  Pičuljan, N. and Car, Ž. "Machine Learning-Based Label Quality Assurance
+  for Object Detection Projects in Requirements Engineering."
+  Applied Sciences 13(10):6234, 2023. https://doi.org/10.3390/app13106234
+
+License
+-------
+
+The source code in this folder and the released checkpoint
+(artifacts/best_model_refit.pth) are licensed under the GNU Affero General
+Public License, version 3 only (AGPL-3.0-only); see LICENSE. The checkpoint
+embeds tensors derived from torchvision, subject to the BSD 3-Clause notice
+below.
+
+Third-party components
+----------------------
+
+The released model weights (artifacts/best_model_refit.pth) contain an image
+trunk INITIALISED from torchvision's ImageNet-pretrained ResNet-18
+(resnet18, IMAGENET1K_V1 weights) and then fine-tuned at a reduced
+learning rate (README item 5), so its weights are derived from, but not
+verbatim copies of, the torchvision parameters. The ImageNet input
+normalisation is applied inside the model (the in_mean / in_std buffers of
+the checkpoint), and the trunk's batch-norm running statistics are kept
+frozen during training: they are torchvision's, up to the floating-point
+rounding of the weight EMA (at most 2e-4 absolute; README items 5 and
+7). The label trunk, the
+fully connected layers and the raster head (README items 4 and 9) are
+trained from their default (random or zero) initialisation by the code
+in this folder.
+torchvision is distributed under the BSD 3-Clause license:
+Copyright (c) Soumith Chintala 2016, All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+  3. Neither the name of the copyright holder nor the names of its contributors
+     may be used to endorse or promote products derived from this software
+     without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+The COCO-pretrained detectors that generate a share of training candidates
+(SSDLite320-MobileNetV3-Large, FasterRCNN-MobileNetV3-Large-320-FPN; README
+item 12) are downloaded from torchvision at run time and are not
+redistributed here.
+
+Dataset material
+----------------
+
+The label files in samples/ are derived from the COCO 2017 annotations
+(CC BY 4.0, © COCO Consortium). No dataset photographs are redistributed:
+the five demo images are COCO train2017 Flickr photographs under
+individual Creative Commons licenses (three NC, one of them also ND) and are
+downloaded by the user via samples/fetch_samples.py; per-image sources
+and licenses are listed in samples/ATTRIBUTION.md. Training data (COCO
+images and annotation files) is obtained by the user from cocodataset.org
+and remains subject to its own terms.

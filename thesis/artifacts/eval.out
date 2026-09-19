@@ -1,0 +1,11 @@
+evaluating artifacts/best_model_refit.pth on 5717 images (11434 candidates)
+
+class  precision  recall  f1-score  support
+    0       0.91    0.86      0.89     5611
+    1       0.87    0.92      0.90     5823
+
+accuracy 0.8913  weighted-F1 0.8912  ROC-AUC 0.9424
+confusion matrix (rows=truth bad/good):
+[[4841  770]
+ [ 473 5350]]
+wrote artifacts/eval.json

@@ -1,0 +1,7 @@
+$ QA_DATASET=coco python3 qa_demo.py artifacts_coco/best_ema_calibrated.pth
+sample_1: P(good)=0.757 -> Good (target Good) OK  | +35% exp: 0.318 -> Bad  (metric Bad)
+sample_2: P(good)=0.042 -> Bad  (target Bad ) OK  | +35% exp: 0.020 -> Bad  (metric Bad)
+sample_3: P(good)=0.963 -> Good (target Good) OK  | +35% exp: 0.884 -> Good (metric Bad)
+sample_4: P(good)=0.966 -> Good (target Good) OK  | +35% exp: 0.928 -> Good (metric Bad)
+sample_5: P(good)=0.045 -> Bad  (target Bad ) OK  | +35% exp: 0.152 -> Bad  (metric Bad)
+verdicts correct: 5/5; +35% expanded labels: metric Bad 5/5, scored Bad 3/5

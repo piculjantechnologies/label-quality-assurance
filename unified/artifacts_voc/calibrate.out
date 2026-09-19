@@ -1,0 +1,6 @@
+$ QA_DATASET=voc python3 qa_calibrate.py artifacts_voc/best_ema.pth --out artifacts_voc/best_ema_calibrated.pth --p_edge 0.25 --swap_share 0.1
+1164 validation images
+uncalibrated: AUC 0.939689  acc@0.5 0.8694 (compare against the training log's best val line)
+val-optimal margin threshold t = -1.5366  ->  acc 0.8857
+saved artifacts_voc/best_ema_calibrated.pth
+calibrated:  AUC 0.939689  acc@0.5 0.8857

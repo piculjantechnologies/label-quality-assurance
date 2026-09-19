@@ -1,0 +1,43 @@
+{
+  "ckpt": "artifacts/best_model_refit.pth",
+  "args": {
+    "ckpt": "artifacts/best_model_refit.pth",
+    "pool": "~/fiftyone/voc-2012/train/processed_annotations",
+    "batch_size": 256,
+    "detector_share": 0.1,
+    "workers": 4,
+    "seed": 0,
+    "limit": 0,
+    "out": "artifacts/eval.json"
+  },
+  "n": 11434,
+  "accuracy": 0.8912891376596117,
+  "weighted_f1": 0.8911631835638307,
+  "roc_auc": 0.9423891142900804,
+  "precision": [
+    0.9109898381633421,
+    0.8741830065359477
+  ],
+  "recall": [
+    0.8627695597932632,
+    0.9187703932680749
+  ],
+  "f1": [
+    0.8862242562929061,
+    0.8959222975801725
+  ],
+  "support": [
+    5611,
+    5823
+  ],
+  "confusion_matrix": [
+    [
+      4841,
+      770
+    ],
+    [
+      473,
+      5350
+    ]
+  ]
+}

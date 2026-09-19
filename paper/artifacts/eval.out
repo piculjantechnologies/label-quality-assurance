@@ -1,0 +1,35 @@
+108151 images, one candidate each: 54143 good, 54008 bad (seed 0, p_exact 0.0)
+[6400/108151] 190.0 candidates/s, eta 8.9 min
+[12800/108151] 217.0 candidates/s, eta 7.3 min
+[19200/108151] 225.8 candidates/s, eta 6.6 min
+[25600/108151] 231.0 candidates/s, eta 6.0 min
+[32000/108151] 232.8 candidates/s, eta 5.5 min
+[38400/108151] 234.4 candidates/s, eta 5.0 min
+[44800/108151] 236.7 candidates/s, eta 4.5 min
+[51200/108151] 237.6 candidates/s, eta 4.0 min
+[57600/108151] 237.6 candidates/s, eta 3.5 min
+[64000/108151] 238.0 candidates/s, eta 3.1 min
+[70400/108151] 238.1 candidates/s, eta 2.6 min
+[76800/108151] 238.1 candidates/s, eta 2.2 min
+[83200/108151] 238.0 candidates/s, eta 1.7 min
+[89600/108151] 237.9 candidates/s, eta 1.3 min
+[96000/108151] 237.6 candidates/s, eta 0.9 min
+[102400/108151] 237.4 candidates/s, eta 0.4 min
+[108151/108151] 237.7 candidates/s, eta 0.0 min
+              precision    recall  f1-score   support
+
+         bad     0.8555    0.7556    0.8025     54008
+        good     0.7817    0.8727    0.8247     54143
+
+    accuracy                         0.8143    108151
+   macro avg     0.8186    0.8142    0.8136    108151
+weighted avg     0.8186    0.8143    0.8136    108151
+
+subtype  support  recall  Table 4-style accuracy
+     A1     9020  0.7407  0.8067
+     A2     9086  0.3122  0.5925
+     A3     8841  0.8721  0.8724
+     B1    13496  0.7902  0.8314
+     B2    13565  0.9523  0.9125
+accuracy 0.8143  ROC-AUC 0.8824  (108151 candidates, 7.6 min)
+wrote artifacts/eval.json
